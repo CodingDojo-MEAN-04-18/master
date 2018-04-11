@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Ninja{
+            constructor(name){
+                this.name = name;
+                let health = 100;
+                this.health = health;
+                let speed = 3;
+                this.speed = speed;
+                let strength = 3;
+                this.strength = strength;
+            }
+
+            sayName() {
+                console.log(this.name);
+            }
+            showStats(){
+                console.log('Health '+this.health);
+                console.log('Speed '+this.speed);
+                console.log('Strength '+this.strength);
+            }
+            drinkSake(){
+                this.health += 10;
+            }
+        }
+
+        class Sensei extends Ninja{
+            constructor(name){
+                super(name);
+                let wisdom = 10;
+                this.wisdom = wisdom;
+                let health = 200;
+                this.health = health;
+                let speed = 10;
+                this.speed = speed;
+                let strength = 10;
+                this.strength = strength;
+            }
+
+            speakWisdom(){
+                const wise =super.drinkSake();
+                console.log('Sensei Health - '+this.health);
+                console.log('Dont eat yellow snow');
+            }
+        }
+        let AC = new Ninja('AC');
+        AC.sayName();
+        AC.showStats();
+        AC.drinkSake();
+        AC.showStats();
+
+        let Bruce = new Sensei('Bruce');
+        Bruce.speakWisdom();
+        
+
+    </script>
+</body>
+</html>

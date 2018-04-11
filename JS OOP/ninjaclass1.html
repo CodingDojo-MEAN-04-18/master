@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Ninja(name) {
+            let health = 100;
+            let speed = 3;
+            let strength = 3;
+            this.name = name;
+
+            function updateHealth(healthy) {
+                health += healthy;
+            };
+            
+            this.readHealth = function() {
+                return health;
+            }
+            
+            this.drinkSake = function() {
+                updateHealth(10);
+                return this;
+            }
+
+            this.sayName = function() {
+                console.log('My name is ' + this.name);
+            }
+
+            function updateSpeed(speedy){
+                speed += speedy;
+            }
+            
+            this.readSpeed = function() {
+                return speed;
+            }
+            
+            this.faster = function(speedy) {
+                updateSpeed(speedy);
+                return this;
+            }
+            function updateStrength(muscle){
+                strength += muscle;
+            }
+            
+            this.readStrength = function() {
+                return strength;
+            }
+            
+            this.stronger = function(muscle) {
+                updateStrength(muscle);
+                return this;
+            }
+
+        }
+        const AC = new Ninja('AC');
+        AC.sayName();
+        AC.drinkSake();
+        AC.faster(25)
+        AC.showStats = function(){
+            console.log('Health '+AC.readHealth());
+            console.log('Speed '+AC.readSpeed());
+            console.log('Strength '+AC.readStrength());
+        }
+        AC.showStats();
+    </script>
+</body>
+</html>
