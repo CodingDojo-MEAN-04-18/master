@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function zero_negativity(numbers){
+            let x = 0;
+            for(i = 0; i < numbers.length; i++){
+                if(numbers[i] < 0){
+                    x = x+1;
+                }
+            }
+                if(x > 0){
+                    console.log('Math 1 - False')
+                }else{
+                    console.log('Math 1 - True')
+                }
+        }
+        zero_negativity([9, 10, 6, 5, 1,  20, 13, 2]);
+    </script>
+
+    <script>
+        function is_even(a){
+            if(a % 2 === 0){
+                console.log('Math 2 - True')
+            }else{
+                console.log('Math 2 - False');
+            }
+        }
+        is_even(3);
+        is_even(8);
+    </script>
+
+    <script>
+        function how_many_even(b){
+            let c = 0;
+            for( i=0; i < b.length; i++){
+                if(b[i] % 2 === 0){
+                    c = c + 1
+                }
+            }
+            console.log('Math 3 - ' + c)
+        }
+        how_many_even([9, 10, 6, 5, 1, 20, 13, 2]);
+    </script>
+
+    <script>
+        function create_dummy_array(n){
+            let m = [];
+            for(i=0;i<n;i++){
+                m.push(Math.floor((Math.random() * 10)));
+            }
+            console.log('Math 4 - ' +m)
+        }
+        create_dummy_array(5);
+    </script>
+
+    <script>
+            function random_choice(d){
+                if(d.length === 0){
+                    console.log('Math 5 - Array is empty');
+                }else{
+                console.log('Math 5 - ' + d[Math.floor((Math.random() * d.length))])
+                }
+            }
+        random_choice([9, 10, 6, 5, 1, 20, 13, 2])
+        random_choice([])
+    </script>
+</body>
+</html>

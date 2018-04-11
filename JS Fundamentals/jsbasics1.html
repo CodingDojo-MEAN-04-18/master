@@ -1,0 +1,52 @@
+`~<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Basics1</title>
+</head>
+<body>
+    <script>
+        let x = [];
+        x.push('coding');
+        x.push('dojo');
+        x.push('rocks');
+        x.pop();
+        console.log(x);
+    </script>
+    
+    <script>
+        const y = [];
+        console.log(y);
+        y.push(88);
+    </script>
+
+    <script>
+        let z = [9, 10, 6, 5, -1, 20, 13, 2];
+        for (let i = 0; i < z.length; i++){
+            console.log(z[i]);
+        }
+        for (let i = 0; i < (z.length-1); i++){
+            console.log(z[i]);
+        }
+    </script>
+
+    <script>
+        let names = ['Kadie', 'Joe', 'Fritz', 'Pierre', 'Alphonso'];
+        for (i = 0; i < names.length; i++){
+            if ((names[i].length) === 5){
+                console.log(names[i]);
+            }
+        };
+    </script>
+
+    <script>
+        function yell(string){
+            console.log(string.toUpperCase())
+        }
+        yell('test');
+    </script>
+    
+</body>
+</html>
